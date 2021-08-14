@@ -1,0 +1,29 @@
+input[type=text]{
+    background-color: white;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+     border-radius: 20px;
+     border: 1px solid #2d9fd9;
+     color: black;
+     width: 550px;
+     height: 45px;
+     padding-left: 10px;
+     margin: 5px;
+     margin-top: 250px;
+    }
+    
+input[type=text]:focus {
+     outline: none;
+     border: 1px solid #a0d18c;
+     color:black;
+}
+
+input[type=submit] {
+    margin: 5px;
+    padding:5px 15px; 
+    background:rgb(255, 255, 255); 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}

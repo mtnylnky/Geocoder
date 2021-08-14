@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block styles %}
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('.static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block content %}
+    <form action="/" method="POST">
+      <input type="text" name="distance" placeholder="Where do you want to go?">
+      <br>
+      <input type="submit" value="Search">
+    </form>
+    <p>{{ distance }}</p>
+{% endblock %}
