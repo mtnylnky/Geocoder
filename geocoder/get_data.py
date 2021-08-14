@@ -24,6 +24,9 @@ def distance(place, lat, lon):
         <= 37.895:
         return 'Thats place in MKAD.'
     else:
+
+        # Calculating Distance in Two Dimensions
+
         lat1 = radians(mkad_lat)
         lon1 = radians(mkad_lon)
         lat2 = radians(lat)
@@ -41,6 +44,9 @@ def distance(place, lat, lon):
 
 
 def get_geo(adress):
+
+    # adress data control
+
     if adress == '':
         return 'You should enter the place/coordinate'
     elif adress is None:
@@ -50,11 +56,17 @@ def get_geo(adress):
                       % current_app.config['BEST_API_KEY'] + adress
                      + '&lang=en-US')
     data_destination = destination_req.json()
+
+    # Checking if there is a result of the extracted data
+
     if data_destination['response']['GeoObjectCollection'
                                     ]['metaDataProperty'
             ]['GeocoderResponseMetaData']['found'] == '0':
         return 'I guess there is no such place'
     else:
+
+        # get the coordinate information of the result
+
         destination_coordinate = data_destination['response'
                 ]['GeoObjectCollection']['featureMember'][0]['GeoObject'
                 ]['Point']['pos']
