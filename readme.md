@@ -10,7 +10,7 @@ Install with pip:
 
 ```
 $ git clone https://github.com/mtnylnky/Geocoder.git
-$ cd geocoder
+$ cd Geocoder
 $ pip install -r requirements.txt
 ```
 
