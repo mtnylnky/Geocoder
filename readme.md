@@ -16,7 +16,7 @@ $ pip install -r requirements.txt
 
 ## Flask Application Structure 
 ```
-geocoder
+Geocoder
 ├── geocoder
 │   ├── home
 │   │    ├── static
